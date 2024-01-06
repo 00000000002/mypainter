@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 800px)">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/intro.js/2.9.3/introjs.css">
+  <link rel="stylesheet" href="./css/intro-theme.css">
+  <meta charset="utf-8">
+  <title>我的画板</title>
+</head>
+
+<body>
+  <canvas id="painter" width=300 height=300 crossOrigin=""></canvas>
+  <div class="controller">
+  	<div class="buttons">
+	    <svg class="icon active" id="pen">
+	      <use xlink:href="#icon-pencil"></use>
+	    </svg>
+	    <svg class="icon" id="eraser">
+	      <use xlink:href="#icon-eraser"></use>
+	    </svg>
+	    <svg class="icon" id="color">
+	      <use xlink:href="#icon-color"></use>
+	    </svg>
+	    <svg class="icon" id="background">
+	      <use xlink:href="#icon-background"></use>
+	    </svg>
+	    <svg class="icon" id="openFile">
+	    	<use xlink:href="#icon-open"></use>
+	    </svg>
+	    <svg class="icon" id="clear">
+	      <use xlink:href="#icon-clear"></use>
+	    </svg>
+	    <svg class="icon" id="download">
+	      <use xlink:href="#icon-download"></use>
+	    </svg>
+	  </div>
+	  <div class="sizePad">
+	  	<div class="slidecontainer">
+	  		<span class="value" id="sizeVal">7</span>
+			  <input type="range" id="size" min="1" max="40" value="7" class="slider" id="myRange">
+			</div>
+	  </div>
+	  <div class="colorPad" id="colorPad">
+			<div class='color active' data-source='#000000'></div>
+			<div class='color' data-source='#ff0000'></div>
+			<div class='color' data-source='#00ff00'></div>
+			<div class='color' data-source='#0000ff'></div>
+	  </div>
+	  <div class="subTool" style="display: none;">
+	  	<input type="color" id="colorSelector">
+	  	<input type="color" id="frequentColorSelector">
+	  	<input type="file" id="paintSelector">
+	  	<input type="file" id="backgroundSelector">
+	  </div>
+	</div>
+	<div class="tutorial-background">
+		<div class="content"></div>
+	</div>
+  <script src="https://at.alicdn.com/t/font_730196_wqniincdmtb.js"></script>
+  <script src="https://cdn.bootcss.com/intro.js/2.9.3/intro.js"></script>
+  <script src="./js/util.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/canvas.js"></script>
+  <script src="./js/toolbar.js"></script>
+  <script src="./js/file.js"></script>
+  <script src="./js/recorder.js"></script>
+  <script src="./js/tutorial.js"></script>
+</body>
+
+</html>
